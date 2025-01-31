@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisekarte - Gaststätte Treffpunkt</title>
+    <title>Gaststätte Treffpunkt</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,20 +11,25 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
+            text-align: center;
         }
 
         header {
             background-color: #444;
             color: #fff;
             padding: 1rem;
-            text-align: center;
+        }
+
+        .header-title {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
         .container {
             max-width: 800px;
             margin: 2rem auto;
             padding: 1rem;
-            text-align: center;
         }
 
         nav {
@@ -55,13 +60,27 @@
             background-color: #444;
             color: #fff;
         }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Gaststätte Treffpunkt</h1>
+        <h1 class="header-title">Gaststätte Treffpunkt</h1>
         <p class="highlight">Inh. Z. & M. Nožić</p>
     </header>
+
+    <div class="image-container">
+        <img src="bilder/kneipe_aussen.jpg" alt="Außenansicht der Gaststätte Treffpunkt">
+    </div>
 
     <div class="container">
         <h2 class="highlight">MEDITERRANE KÜCHE</h2>
@@ -75,5 +94,6 @@
 
         <p>Sonntags bieten wir<br><strong>von 10:00 Uhr bis 12:00 Uhr Frühstück an.</strong></p>
         <p class="highlight">Bitte vorher reservieren!</p>
+    </div>
 </body>
 </html>
