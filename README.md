@@ -1,2 +1,2 @@
 # treffpunkt
-Webseite für die Langenfelder Kneipe "Treffpunkt".
+Webseite für die Langenfelder Gaststätte "Treffpunkt".
