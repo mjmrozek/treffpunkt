@@ -6,6 +6,8 @@ Statische Webseite (reines HTML/CSS, kein Build-Schritt) für die Gaststätte Tr
 
 - `index.html` – Startseite: Türschild mit Live-Status, Öffnungszeiten, Besuch & Reservierung, Sonntagsfrühstück, Gerichte-Auswahl
 - `oeffnungszeiten.js` – berechnet in Europe/Berlin-Zeit, ob geöffnet ist (Türschild) und hebt den heutigen Tag hervor. **Öffnungszeiten stehen doppelt:** in `HOURS` in dieser Datei und als Liste in `index.html` – bei Änderungen beide anpassen.
+- `impressum.html`, `datenschutz.html` – Rechtstexte; gelb markierte `<mark class="placeholder">`-Stellen müssen noch ausgefüllt/geprüft werden
+- `netlify.toml` – Security-Header inkl. strenger Content-Security-Policy (nur `'self'`)
 - `speisekarte.html` – Speisekarte als Seitenbilder (antippen = volle Größe) plus PDF-Download
 - `styles.css` – gemeinsames Stylesheet; Farben als Variablen in `:root`
 - `fonts/` – Schriften lokal (Yellowtail für den Schriftzug, Bitter für Überschriften, Source Sans 3 für Text). Bewusst nicht von Google Fonts geladen (DSGVO).
@@ -13,6 +15,13 @@ Statische Webseite (reines HTML/CSS, kein Build-Schritt) für die Gaststätte Tr
 - `testfile.txt` – altes Testfile für die GitHub-Verbindung, gehört nicht zur Seite
 
 Alle Seiten teilen Kopfleiste, Navigation (`Start | Speisekarte`) und Footer. Ein neuer Menüpunkt muss in jeder HTML-Datei eingetragen werden. Im Footer steht klein der Credit „Mrozek IT-Solutions“ (https://mrozek-it-solutions.com) – bewusst unauffällig halten.
+
+## Datenschutz-Regeln
+
+- Keine externen Ressourcen einbinden (keine CDNs, Google Fonts, Maps-Iframes, YouTube, Social-Plugins) und keine Cookies/kein Tracking – darauf beruht die Datenschutzerklärung, und deshalb gibt es keinen Cookie-Banner.
+- Keine Inline-Styles, Inline-Skripte oder `onclick`-Attribute: die CSP in `netlify.toml` blockiert sie.
+- Externe Links mit `rel="noopener noreferrer"`.
+- Wird doch etwas Externes nötig: CSP erweitern **und** `datenschutz.html` anpassen.
 
 ## Design
 
@@ -58,8 +67,10 @@ Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der 
 - Speisekarte als Bilder statt eingebettetem PDF.
 - Credit „Mrozek IT-Solutions“ klein im Footer.
 
+- Impressum, Datenschutzerklärung, Footer-Links und Security-Header (`netlify.toml`) ergänzt; Footer-Hinweis auf „Keine Cookies, kein Tracking“ geändert.
+
 ## Offene Ideen
 
 - PDF unter einem festen Namen ablegen (z. B. `speisekarte.pdf`), damit bei einer neuen Karte nur die Datei getauscht werden muss.
 - Speisekarte zusätzlich als HTML-Text anbieten (besser für Handy und Suchmaschinen).
-- Impressum und Datenschutzerklärung fehlen – für eine geschäftliche Webseite in Deutschland Pflicht.
+- Platzhalter in Impressum und Datenschutzerklärung ausfüllen.

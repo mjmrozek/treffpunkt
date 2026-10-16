@@ -600,3 +600,40 @@ a { color: inherit; }
     .doorsign-board { animation: none; }
     .btn { transition: none; }
 }
+
+/* ---------- Rechtstexte ---------- */
+.legal {
+    max-width: 46rem;
+}
+.legal h2 {
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    color: var(--green-deep);
+    margin: 2.25rem 0 0.5rem;
+}
+.legal h2:first-child { margin-top: 0; }
+.legal h3 {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0.4rem;
+}
+.legal p, .legal ul { margin: 0 0 0.9rem; }
+.legal ul { padding-left: 1.25rem; }
+.legal a { overflow-wrap: anywhere; }
+.legal-date { color: var(--ink-soft); }
+/* Platzhalter: fallen absichtlich auf, bis sie ersetzt sind */
+.placeholder {
+    background: #FFE45C;
+    color: #3A2E00;
+    padding: 0.05em 0.3em;
+    border-radius: 3px;
+    font-weight: 600;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.footer-links { text-align: right; }
+.site-footer a[aria-current="page"] { text-decoration: none; }
+@media (max-width: 760px) {
+    .footer-links { text-align: left; }
+}
