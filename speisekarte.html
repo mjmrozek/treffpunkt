@@ -3,28 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speisekarte - Gaststätte Treffpunkt</title>
+    <title>Speisekarte – Gaststätte Treffpunkt</title>
+    <meta name="description" content="Speisekarte der Gaststätte Treffpunkt in Langenfeld: Ćevapčići, Pljeskavica, Schnitzel, Fisch, Steaks und Getränke.">
+    <meta name="theme-color" content="#143626">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="header-title">Gaststätte Treffpunkt</h1>
-        <p class="highlight">Inh. Z. & M. Nožić</p>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="wordmark-small" href="index.html">Treffpunkt</a>
+            <nav class="mainnav" aria-label="Hauptnavigation">
+                <a href="index.html">Start</a>
+                <a href="speisekarte.html" aria-current="page">Speisekarte</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Start</a>
-        <a href="speisekarte.html">Speisekarte</a>
-    </nav>
-    <div class="container">
-        <h2 class="highlight">UNSERE SPEISEKARTE</h2>
-        <p><a class="button" href="bilder/202501_speisekarte.pdf" target="_blank" rel="noopener">Speisekarte öffnen (PDF)</a></p>
-        <object class="pdf-viewer" data="bilder/202501_speisekarte.pdf" type="application/pdf">
-            <p>Ihr Browser kann die Speisekarte hier nicht anzeigen. Bitte nutzen Sie den Button oben.</p>
-        </object>
-        <p>Alle Preise inkl. der gesetzlichen Mehrwertsteuer und Bedienung</p>
-    </div>
-    <footer>
-        <p>Diese Seite befindet sich noch im Aufbau. Keine Speicherung von Nutzerdaten. <a href="mailto:info@treffpunkt-langenfeld.de" style="color: #bbb;">Kontakt</a></p>
+
+    <main>
+        <section class="page-head">
+            <div class="wrap">
+                <p class="eyebrow">Gaststätte Treffpunkt</p>
+                <h1>Speisekarte</h1>
+                <p>Mediterrane Küche, Balkan-Spezialitäten vom Grill und Getränke. Reservierung unter <a href="tel:+49217317718">02173 - 17718</a>.</p>
+                <a class="btn btn-primary" href="bilder/202501_speisekarte.pdf" download>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+                    Als PDF herunterladen
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <nav aria-label="Abschnitte der Speisekarte">
+                    <ul class="toc">
+                        <li><a href="#seite-3">Kleiner Hunger, Suppen &amp; Salate</a></li>
+                        <li><a href="#seite-4">Spezialitäten &amp; Hauptgerichte</a></li>
+                        <li><a href="#seite-5">Fisch, Steaks &amp; Nachspeisen</a></li>
+                        <li><a href="#seite-6">Getränke</a></li>
+                        <li><a href="#seite-2">Allergene</a></li>
+                    </ul>
+                </nav>
+
+                <ol class="menu-pages">
+                    <li id="seite-3"><a href="bilder/speisekarte/seite-3.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-3.jpg" width="1100" height="1556" loading="lazy" alt="Speisekarte: Schnittchenteller für den kleinen Hunger, Suppen, Salate, unsere Klassiker und Gerichte für kleine Gäste"></a></li>
+                    <li id="seite-4"><a href="bilder/speisekarte/seite-4.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-4.jpg" width="1100" height="1556" loading="lazy" alt="Speisekarte: unsere Spezialitäten wie Ćevapčići, Pljeskavica, Ražnjići und Grillteller, Hauptgerichte wie Schnitzel und Putensteak, Balkanplatte für 2 Personen"></a></li>
+                    <li id="seite-5"><a href="bilder/speisekarte/seite-5.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-5.jpg" width="1100" height="1556" loading="lazy" alt="Speisekarte: Fisch, Steaks, Beilagen und Nachspeisen"></a></li>
+                    <li id="seite-6"><a href="bilder/speisekarte/seite-6.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-6.jpg" width="1100" height="1556" loading="lazy" alt="Getränkekarte: Bier vom Fass, Flaschenbier und hausgemachte Spirituosen"></a></li>
+                    <li id="seite-7"><a href="bilder/speisekarte/seite-7.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-7.jpg" width="1100" height="1556" loading="lazy" alt="Getränkekarte: alkoholfreie Getränke und Softdrinks"></a></li>
+                    <li id="seite-8"><a href="bilder/speisekarte/seite-8.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-8.jpg" width="1100" height="1556" loading="lazy" alt="Getränkekarte: Spirituosen, Longdrinks, Weine und Sekt"></a></li>
+                    <li id="seite-2"><a href="bilder/speisekarte/seite-2.jpg" target="_blank" rel="noopener"><img src="bilder/speisekarte/seite-2.jpg" width="1100" height="1556" loading="lazy" alt="Liste der deklarationspflichtigen Allergene A bis N"></a></li>
+                </ol>
+                <p class="menu-end">Alle Preise inkl. der gesetzlichen Mehrwertsteuer und Bedienung.<br>Einen guten Appetit, zum Wohl und Prost!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <a class="wordmark-small" href="index.html">Treffpunkt</a>
+                <p>Inh. Z. &amp; M. Nožić · Talstr. 38 · 40764 Langenfeld</p>
+            </div>
+            <p><a href="mailto:info@treffpunkt-langenfeld.de">info@treffpunkt-langenfeld.de</a></p>
+            <p class="credit">Keine Speicherung von Nutzerdaten. · Webseite: <a href="https://mrozek-it-solutions.com" target="_blank" rel="noopener">Mrozek IT-Solutions</a></p>
+        </div>
     </footer>
 </body>
 </html>

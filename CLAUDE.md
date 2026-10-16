@@ -4,13 +4,25 @@ Statische Webseite (reines HTML/CSS, kein Build-Schritt) für die Gaststätte Tr
 
 ## Struktur
 
-- `index.html` – Startseite: Adresse, Öffnungszeiten, Frühstück, Außenbild
-- `speisekarte.html` – Unterseite mit eingebettetem Speisekarten-PDF plus Button zum Öffnen (für Handys, die eingebettete PDFs nicht anzeigen)
-- `styles.css` – gemeinsames Stylesheet für alle Seiten
-- `bilder/` – Bilder und das Speisekarten-PDF (`202501_speisekarte.pdf`, aus Canva exportiert, 8 Seiten)
+- `index.html` – Startseite: Türschild mit Live-Status, Öffnungszeiten, Besuch & Reservierung, Sonntagsfrühstück, Gerichte-Auswahl
+- `oeffnungszeiten.js` – berechnet in Europe/Berlin-Zeit, ob geöffnet ist (Türschild) und hebt den heutigen Tag hervor. **Öffnungszeiten stehen doppelt:** in `HOURS` in dieser Datei und als Liste in `index.html` – bei Änderungen beide anpassen.
+- `speisekarte.html` – Speisekarte als Seitenbilder (antippen = volle Größe) plus PDF-Download
+- `styles.css` – gemeinsames Stylesheet; Farben als Variablen in `:root`
+- `fonts/` – Schriften lokal (Yellowtail für den Schriftzug, Bitter für Überschriften, Source Sans 3 für Text). Bewusst nicht von Google Fonts geladen (DSGVO).
+- `bilder/` – Außenfoto, Speisekarten-PDF (`202501_speisekarte.pdf`, aus Canva, 8 Seiten) und `bilder/speisekarte/seite-1…8.jpg`
 - `testfile.txt` – altes Testfile für die GitHub-Verbindung, gehört nicht zur Seite
 
-Alle Seiten teilen Header, Navigation (`Start | Speisekarte`) und Footer. Ein neuer Menüpunkt muss deshalb in jeder HTML-Datei eingetragen werden.
+Alle Seiten teilen Kopfleiste, Navigation (`Start | Speisekarte`) und Footer. Ein neuer Menüpunkt muss in jeder HTML-Datei eingetragen werden. Im Footer steht klein der Credit „Mrozek IT-Solutions“ (https://mrozek-it-solutions.com) – bewusst unauffällig halten.
+
+## Design
+
+Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der Fassade, Gold/Messing aus der Speisekarte. Der Schriftzug „Treffpunkt“ in Schreibschrift erinnert an das Leuchtschild über der Tür. Erkennungsmerkmal ist das hängende Türschild im Kopfbereich (schwingt beim Laden, außer bei „Bewegung reduzieren“).
+
+## Neue Speisekarte einspielen
+
+1. Neues PDF nach `bilder/` legen und den Download-Link in `speisekarte.html` anpassen.
+2. Seitenbilder neu erzeugen: `pdftoppm -jpeg -jpegopt quality=78,progressive=y -scale-to-x 1100 -scale-to-y -1 bilder/<datei>.pdf bilder/speisekarte/seite`
+3. Reihenfolge, Sprungmarken und Alt-Texte in `speisekarte.html` prüfen (Seite 1 = Deckblatt wird nicht gezeigt, Seite 2 = Allergene steht am Ende).
 
 ## Hosting und Deployment
 
@@ -41,9 +53,13 @@ Alle Seiten teilen Header, Navigation (`Start | Speisekarte`) und Footer. Ein ne
 - Umzug der Domain von einer IONOS-Weiterleitung (302 auf `…netlify.app`) zu Netlify als Custom Domain mit Netlify DNS; die IONOS-Maileinträge in Netlify DNS übernommen.
 - Unterseite `speisekarte.html` mit dem PDF und Navigation auf beiden Seiten angelegt; Titel der Startseite von „Speisekarte - …“ auf „Gaststätte Treffpunkt“ geändert.
 
+**16.10.2026**
+- Komplettes Redesign beider Seiten (Farben, Schriften, Türschild mit Live-Öffnungsstatus).
+- Speisekarte als Bilder statt eingebettetem PDF.
+- Credit „Mrozek IT-Solutions“ klein im Footer.
+
 ## Offene Ideen
 
 - PDF unter einem festen Namen ablegen (z. B. `speisekarte.pdf`), damit bei einer neuen Karte nur die Datei getauscht werden muss.
-- PDF komprimieren (aktuell 3,6 MB, langsam auf dem Handy).
 - Speisekarte zusätzlich als HTML-Text anbieten (besser für Handy und Suchmaschinen).
 - Impressum und Datenschutzerklärung fehlen – für eine geschäftliche Webseite in Deutschland Pflicht.

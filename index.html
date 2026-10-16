@@ -3,34 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaststätte Treffpunkt</title>
+    <title>Gaststätte Treffpunkt – Langenfeld</title>
+    <meta name="description" content="Gaststätte Treffpunkt in Langenfeld: mediterrane Küche und Balkan-Spezialitäten vom Grill. Talstr. 38, Tel. 02173 17718. Dienstag Ruhetag.">
+    <meta name="theme-color" content="#143626">
+    <link rel="preload" href="fonts/yellowtail-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 class="header-title">Gaststätte Treffpunkt</h1>
-        <p class="highlight">Inh. Z. & M. Nožić</p>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="wordmark-small" href="index.html">Treffpunkt</a>
+            <nav class="mainnav" aria-label="Hauptnavigation">
+                <a href="index.html" aria-current="page">Start</a>
+                <a href="speisekarte.html">Speisekarte</a>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="index.html">Start</a>
-        <a href="speisekarte.html">Speisekarte</a>
-    </nav>
-    <div class="image-container">
-        <img src="bilder/kneipe_aussen.jpg" alt="Außenansicht der Gaststätte Treffpunkt">
-    </div>
-    <div class="container">
-        <h2 class="highlight">MEDITERRANE KÜCHE</h2>
-        <p>Talstr. 38<br>40764 Langenfeld<br>Tel.: 02173 - 17718</p>
-        <h3>Unsere Öffnungszeiten:</h3>
-        <p>Montag - Samstag<br><strong>14:00 Uhr - 23:00 Uhr</strong></p>
-        <p>Sonntag<br><strong>10:00 Uhr - 22:00 Uhr</strong></p>
-        <p class="highlight">Dienstag ist Ruhetag</p>
-        <p>Zu bestimmten Anlässen haben wir dienstags geöffnet.</p>
-        <p>Sonntags bieten wir<br><strong>von 10:00 Uhr bis 12:00 Uhr Frühstück an.</strong></p>
-        <p class="highlight">Bitte vorher reservieren!</p>
-    </div>
-    <footer>
-        <p>Diese Seite befindet sich noch im Aufbau. Keine Speicherung von Nutzerdaten. <a href="mailto:info@treffpunkt-langenfeld.de" style="color: #bbb;">Kontakt</a></p>
+
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <div>
+                    <p class="eyebrow">Gaststätte · Langenfeld</p>
+                    <h1 class="wordmark">Treffpunkt</h1>
+                    <p class="owners">Inh. Z. &amp; M. Nožić</p>
+                    <p class="lead">Mediterrane Küche und Balkan-Spezialitäten vom Grill – in der Talstraße 38.</p>
+                    <div class="actions">
+                        <a class="btn btn-primary" href="tel:+49217317718">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+                            02173 17718
+                        </a>
+                        <a class="btn btn-ghost" href="speisekarte.html">Zur Speisekarte</a>
+                    </div>
+                </div>
+
+                <div class="doorsign" id="doorsign" aria-live="polite">
+                    <svg class="doorsign-cord" viewBox="0 0 100 60" preserveAspectRatio="none" aria-hidden="true">
+                        <line x1="50" y1="0" x2="2" y2="60" vector-effect="non-scaling-stroke"/>
+                        <line x1="50" y1="0" x2="98" y2="60" vector-effect="non-scaling-stroke"/>
+                    </svg>
+                    <div class="doorsign-board">
+                        <p class="doorsign-label" id="doorsign-label">Öffnungszeiten</p>
+                        <p class="doorsign-status" id="doorsign-status">Willkommen</p>
+                        <p class="doorsign-detail" id="doorsign-detail">Täglich außer dienstags geöffnet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="photo">
+            <div class="wrap">
+                <figure>
+                    <img src="bilder/kneipe_aussen.jpg" width="1608" height="894" alt="Die Gaststätte Treffpunkt von außen: Klinkerfassade mit Leuchtschild über der Tür, links das grüne Biergarten-Banner">
+                </figure>
+            </div>
+        </div>
+
+        <section class="section">
+            <div class="wrap grid-2">
+                <div class="card">
+                    <h2 class="section-title">Öffnungszeiten</h2>
+                    <ul class="hours" id="hours">
+                        <li data-day="1"><span class="day">Montag</span><span class="time">14:00 – 23:00 Uhr</span></li>
+                        <li data-day="2" class="rest"><span class="day">Dienstag</span><span class="time">Ruhetag</span></li>
+                        <li data-day="3"><span class="day">Mittwoch</span><span class="time">14:00 – 23:00 Uhr</span></li>
+                        <li data-day="4"><span class="day">Donnerstag</span><span class="time">14:00 – 23:00 Uhr</span></li>
+                        <li data-day="5"><span class="day">Freitag</span><span class="time">14:00 – 23:00 Uhr</span></li>
+                        <li data-day="6"><span class="day">Samstag</span><span class="time">14:00 – 23:00 Uhr</span></li>
+                        <li data-day="0"><span class="day">Sonntag</span><span class="time">10:00 – 22:00 Uhr<small>Frühstück 10:00 – 12:00 Uhr</small></span></li>
+                    </ul>
+                    <p class="note">Zu bestimmten Anlässen haben wir dienstags geöffnet.</p>
+                </div>
+
+                <div class="card visit">
+                    <h2 class="section-title">Besuch &amp; Reservierung</h2>
+                    <dl>
+                        <dt>Adresse</dt>
+                        <dd>Talstr. 38<br>40764 Langenfeld<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Gastst%C3%A4tte+Treffpunkt+Talstr.+38+40764+Langenfeld" target="_blank" rel="noopener">Route planen</a></dd>
+                        <dt>Telefon</dt>
+                        <dd><a href="tel:+49217317718">02173 - 17718</a></dd>
+                    </dl>
+                    <p class="reserve">Bitte vorher reservieren!</p>
+                </div>
+            </div>
+
+            <div class="wrap">
+                <div class="breakfast">
+                    <p class="breakfast-time">10 – 12 Uhr</p>
+                    <h3>Sonntagsfrühstück</h3>
+                    <p>Jeden Sonntag bieten wir Frühstück an.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <h2 class="section-title">Aus unserer Küche</h2>
+                <ul class="dishes">
+                    <li><h3>Ćevapčići</h3><p>mit Djuveč-Reis und Salat</p></li>
+                    <li><h3>Pljeskavica</h3><p>Hacksteak, auf Wunsch mit Schafskäse gefüllt</p></li>
+                    <li><h3>Ražnjići</h3><p>Fleischspießchen mit Djuveč-Reis und Salat</p></li>
+                    <li><h3>Balkanplatte</h3><p>für 2 Personen, verschiedene Sorten Fleisch</p></li>
+                </ul>
+                <a class="btn btn-dark" href="speisekarte.html">Ganze Speisekarte ansehen</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div>
+                <a class="wordmark-small" href="index.html">Treffpunkt</a>
+                <p>Inh. Z. &amp; M. Nožić · Talstr. 38 · 40764 Langenfeld</p>
+            </div>
+            <p><a href="mailto:info@treffpunkt-langenfeld.de">info@treffpunkt-langenfeld.de</a></p>
+            <p class="credit">Keine Speicherung von Nutzerdaten. · Webseite: <a href="https://mrozek-it-solutions.com" target="_blank" rel="noopener">Mrozek IT-Solutions</a></p>
+        </div>
     </footer>
+
+    <script src="oeffnungszeiten.js"></script>
 </body>
 </html>
