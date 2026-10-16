@@ -9,7 +9,7 @@ Live: https://treffpunkt-langenfeld.de
 - `index.html` – Startseite: Türschild mit Live-Status, Öffnungszeiten, Besuch & Reservierung, Sonntagsfrühstück, Gerichte-Auswahl (ohne Preise)
 - `oeffnungszeiten.js` – berechnet in Europe/Berlin-Zeit, ob geöffnet ist (Türschild), und hebt den heutigen Tag hervor. **Öffnungszeiten stehen doppelt:** in `HOURS` in dieser Datei und als Liste in `index.html` – bei Änderungen beide anpassen.
 - `speisekarte.html` – Speisekarte als Seitenbilder (antippen = volle Größe), Sprungmarken zu den Abschnitten, PDF-Download
-- `impressum.html`, `datenschutz.html` – Rechtstexte. Verantwortliche/Anbieterin ist **Jasmin Nožić**, Talstraße 38, 40764 Langenfeld – in beiden Texten nur dieser eine Name. Für künftige Platzhalter gibt es die gelbe Klasse `<mark class="placeholder">`.
+- `impressum.html`, `datenschutz.html` – Rechtstexte. Als Anbieter/Verantwortliche stehen **Z. Nožić und Maria Nožić**, Talstraße 38, 40764 Langenfeld (M. = Maria). Übrige Seite bleibt bei „Inh. Z. & M. Nožić“. Für künftige Platzhalter gibt es die gelbe Klasse `<mark class="placeholder">`.
 - `netlify.toml` – Security-Header inkl. strenger Content-Security-Policy (nur `'self'`)
 - `styles.css` – gemeinsames Stylesheet; Farben als Variablen in `:root`
 - `fonts/` – Schriften lokal (Yellowtail für den Schriftzug, Bitter für Überschriften, Source Sans 3 für Text), bewusst nicht von Google Fonts (DSGVO)
@@ -86,11 +86,12 @@ Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der 
 - Impressum, Datenschutzerklärung, Footer-Links und Security-Header (`netlify.toml`) ergänzt; Footer-Hinweis „Keine Speicherung von Nutzerdaten“ durch „Keine Cookies, kein Tracking“ ersetzt (Netlify speichert Server-Logs).
 - Neue Speisekarte (Stand 10/2026, `speisekarte_102026.pdf`) eingespielt, alte Karte von 01/2025 entfernt. Neu darin u. a. „Selbstgemachte Frikadelle“, fast alle Preise erhöht.
 - Kontakt präzisiert: Reservierung nur telefonisch, E-Mail nur für allgemeine Anfragen (Startseite, Speisekarte, Footer, Datenschutz).
-- Rechtstexte ausgefüllt: Jasmin Nožić als einzige Verantwortliche, Netlify- und IONOS-Angaben (DPF-Zertifizierung, AVV als Teil der AGB/Nutzungsbedingungen, IONOS-Server in DE/EU), Bildnachweis; „Vertreten durch“ und Aufsichtsbehörde entfernt.
+- Rechtstexte ausgefüllt: Z. Nožić und Maria Nožić als Verantwortliche (zunächst Jasmin Nožić, dann korrigiert), Netlify- und IONOS-Angaben (DPF-Zertifizierung, AVV als Teil der AGB/Nutzungsbedingungen, IONOS-Server in DE/EU), Bildnachweis; „Vertreten durch“ und Aufsichtsbehörde entfernt.
 
 ## Offen
 
 **Rechtstexte:**
+- Vorname zu „Z.“ klären und in Impressum und Datenschutz ausschreiben (Initialen allein reichen im Impressum in der Regel nicht).
 - Impressum: USt-IdNr. eintragen (steht derzeit „wird ergänzt“).
 - Bildnachweis prüfen: steht als „Fotos: Matthäus Mrozek, Sanjin Nožić“, weil unklar ist, wer das Außenfoto gemacht hat – bei Klarheit auf eine Person kürzen.
 
