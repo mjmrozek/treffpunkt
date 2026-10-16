@@ -23,6 +23,11 @@ Alle Seiten teilen Kopfleiste, Navigation (`Start | Speisekarte`) und Footer. Ei
 - Externe Links mit `rel="noopener noreferrer"`.
 - Wird doch etwas Externes nötig: CSP erweitern **und** `datenschutz.html` anpassen.
 
+## Kontakt-Regeln
+
+- Reservierungen **nur telefonisch** (02173 - 17718). Nirgends zur Reservierung per E-Mail auffordern.
+- E-Mail `info@treffpunkt-langenfeld.de` nur für allgemeine Anfragen; sie wird nicht täglich gelesen, daher der Hinweis, dass Antworten einige Tage dauern können.
+
 ## Design
 
 Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der Fassade, Gold/Messing aus der Speisekarte. Der Schriftzug „Treffpunkt“ in Schreibschrift erinnert an das Leuchtschild über der Tür. Erkennungsmerkmal ist das hängende Türschild im Kopfbereich (schwingt beim Laden, außer bei „Bewegung reduzieren“).
@@ -69,6 +74,7 @@ Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der 
 
 - Impressum, Datenschutzerklärung, Footer-Links und Security-Header (`netlify.toml`) ergänzt; Footer-Hinweis auf „Keine Cookies, kein Tracking“ geändert.
 - Neue Speisekarte (Stand 10/2026, `speisekarte_102026.pdf`) eingespielt, alte Karte von 01/2025 entfernt.
+- Kontakt präzisiert: Reservierung nur telefonisch, E-Mail nur für allgemeine Anfragen (Startseite, Speisekarte, Footer, Datenschutz).
 
 ## Offene Ideen
 

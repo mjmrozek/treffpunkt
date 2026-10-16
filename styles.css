@@ -637,3 +637,11 @@ a { color: inherit; }
 @media (max-width: 760px) {
     .footer-links { text-align: left; }
 }
+
+.visit dd a { overflow-wrap: anywhere; }
+.dd-note {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+}
