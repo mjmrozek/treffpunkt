@@ -11,7 +11,7 @@ Statische Webseite (reines HTML/CSS, kein Build-Schritt) für die Gaststätte Tr
 - `speisekarte.html` – Speisekarte als Seitenbilder (antippen = volle Größe) plus PDF-Download
 - `styles.css` – gemeinsames Stylesheet; Farben als Variablen in `:root`
 - `fonts/` – Schriften lokal (Yellowtail für den Schriftzug, Bitter für Überschriften, Source Sans 3 für Text). Bewusst nicht von Google Fonts geladen (DSGVO).
-- `bilder/` – Außenfoto, Speisekarten-PDF (`202501_speisekarte.pdf`, aus Canva, 8 Seiten) und `bilder/speisekarte/seite-1…8.jpg`
+- `bilder/` – Außenfoto, Speisekarten-PDF (`speisekarte_102026.pdf`, Stand Oktober 2026, aus Canva, 8 Seiten) und `bilder/speisekarte/seite-1…8.jpg`
 - `testfile.txt` – altes Testfile für die GitHub-Verbindung, gehört nicht zur Seite
 
 Alle Seiten teilen Kopfleiste, Navigation (`Start | Speisekarte`) und Footer. Ein neuer Menüpunkt muss in jeder HTML-Datei eingetragen werden. Im Footer steht klein der Credit „Mrozek IT-Solutions“ (https://mrozek-it-solutions.com) – bewusst unauffällig halten.
@@ -68,6 +68,7 @@ Farben vom Haus abgeleitet: Flaschengrün vom Biergarten-Banner, Klinkerrot der 
 - Credit „Mrozek IT-Solutions“ klein im Footer.
 
 - Impressum, Datenschutzerklärung, Footer-Links und Security-Header (`netlify.toml`) ergänzt; Footer-Hinweis auf „Keine Cookies, kein Tracking“ geändert.
+- Neue Speisekarte (Stand 10/2026, `speisekarte_102026.pdf`) eingespielt, alte Karte von 01/2025 entfernt.
 
 ## Offene Ideen
 
